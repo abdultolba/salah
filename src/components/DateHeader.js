@@ -10,7 +10,7 @@ class DateHeader extends Component {
         : "")
     );
   };
-  
+
   renderDate = () => {
     const months = [
       "January",

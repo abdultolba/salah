@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import PrayerTimes from './components/PrayerTimes';
+import App from './components/App';
 
-render(<PrayerTimes/>, document.getElementById('root'));
+render(<App/>, document.getElementById('root'));
