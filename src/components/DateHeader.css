@@ -1,0 +1,11 @@
+.container-header {
+    margin: 30px;
+    background-color: #ffffff;
+    opacity: 0.6;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    border-radius: 5px;
+}
+
+.container-header h3 {
+    padding: 0.8rem;
+}
