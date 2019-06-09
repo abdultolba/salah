@@ -11,7 +11,8 @@ class App extends Component {
     super(props);
     this.state = {
       prayerTimes: [],
-      errorMessage: ""
+      errorMessage: "",
+      loading: true
     };
   }
 
@@ -32,10 +33,11 @@ class App extends Component {
           });
           console.log(response);
           this.setState({
-            prayerTimes: Object.entries(response.data.data.timings)
+            prayerTimes: Object.entries(response.data.data.timings),
+            loading: false
           });
         },
-        err => this.setState({ errorMessage: err.message }), {
+        err => this.setState({ errorMessage: err.message, loading: false }), {
             enableHighAccuracy: true,
             timeout: 5000,
             maximumAge: 10000
@@ -49,7 +51,7 @@ class App extends Component {
       <Fragment>
         <Container>
           <DateHeader />
-          <PrayerTimesList prayerTimes={this.state.prayerTimes} />
+          <PrayerTimesList loading={this.state.loading} prayerTimes={this.state.prayerTimes} />
         </Container>
         <Footer />
       </Fragment>

@@ -1,8 +1,18 @@
 import React, { Component } from "react";
+import Loader from "react-loader-spinner";
 import Prayer from "./Prayer";
+import "./PrayerTimesList.css";
 
 class PrayerTimesList extends Component {
   render() {
+    if (this.props.loading) {
+      console.log("test");
+      return (
+        <div className="loader">
+          <Loader type="Oval" color="rgb(1,205,180)" height="100" width="100" />
+        </div>
+      );
+    }
     const prayers = ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"];
     return (
       <div>

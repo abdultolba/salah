@@ -4,14 +4,14 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer>
-      <p class="icons">
+      <p className="icons">
         <a
           href="https://www.github.com/abdultolba"
           rel="noreferrer noopener"
           alt="Github"
           target="_blank"
         >
-          <i class="icon ion-logo-github" /> GitHub
+          <i className="icon ion-logo-github" /> GitHub
         </a>
         <a
           href="https://www.linkedin.com/in/abdulrahman-tolba"
@@ -19,7 +19,7 @@ const Footer = () => {
           alt="LinkedIn"
           target="_blank"
         >
-          <i class="icon ion-logo-linkedin" /> LinkedIn
+          <i className="icon ion-logo-linkedin" /> LinkedIn
         </a>
         <a
           href="https://www.twitter.com/abdultolba_"
@@ -27,7 +27,7 @@ const Footer = () => {
           alt="Twitter"
           target="_blank"
         >
-          <i class="icon ion-logo-twitter" /> Twitter
+          <i className="icon ion-logo-twitter" /> Twitter
         </a>
         <a
           href="https://www.abdultolba.com"
@@ -35,7 +35,7 @@ const Footer = () => {
           alt="Personal Website"
           target="_blank"
         >
-          <i class="icon ion-md-globe" /> Portfolio
+          <i className="icon ion-md-globe" /> Portfolio
         </a>
       </p>
       <p>
