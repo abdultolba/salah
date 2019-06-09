@@ -4,8 +4,34 @@
     opacity: 0.6;
     filter: alpha(opacity=80); /* For IE8 and earlier */
     border-radius: 5px;
-}
-
-.container-header h3 {
-    padding: 0.8rem;
-}
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+  
+  .container-header h3, .container-header h4 {
+      padding-left: 1rem;
+  }
+  
+  .container-header h3 {
+    padding-top: 0.7rem;
+  }
+  
+  .container-header h4 {
+      padding-bottom: 0.7rem;
+    }
+  
+  .mosque {
+    /*Relevant part for image div*/
+    position : absolute;
+    z-index: 100;
+    top: 40%;
+    right: 10%;
+  
+    /*Less relevant part for image div*/
+    width : 75px; 
+    height : 75px;
+  }
+  

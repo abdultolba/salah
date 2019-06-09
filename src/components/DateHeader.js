@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { ReactComponent as Mosque } from "../assets/mosque.svg";
 import "./DateHeader.css";
 
 class DateHeader extends Component {
@@ -37,7 +38,9 @@ class DateHeader extends Component {
       <div>
         <div className="container-header">
           <h3>{this.renderDate()}</h3>
+          <h4>{new Date().toLocaleString('en-us', {  weekday: 'long' })}</h4>
         </div>
+          <Mosque className="mosque"/>
       </div>
     );
   }
