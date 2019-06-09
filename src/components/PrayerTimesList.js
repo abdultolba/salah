@@ -1,14 +1,20 @@
-import React, { Component } from 'react';
-import Prayer from './Prayer';
+import React, { Component } from "react";
+import Prayer from "./Prayer";
 
 class PrayerTimesList extends Component {
-    render() {
-        return (
-            <div>
-                {this.props.prayerTimes.map(prayer => <Prayer/>)}
-            </div>
-        )
-    }
+  render() {
+    const prayers = ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"];
+    return (
+      <div>
+        {console.log(this.props.prayerTimes)}
+        {this.props.prayerTimes
+          .filter(prayer => prayers.includes(prayer[0]))
+          .map(prayer => {
+            return <Prayer key={prayer[0]} name={prayer[0]} time={prayer[1]} />;
+          })}
+      </div>
+    );
+  }
 }
 
 export default PrayerTimesList;

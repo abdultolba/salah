@@ -1,0 +1,27 @@
+.prayer-bar {
+    position: relative;
+    margin: 30px;
+    padding: 1rem;
+    background-color: #ffffff;
+    opacity: 0.6;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .prayer-bar:hover{
+    cursor: pointer;
+    background-color: rgb(1,205,180);
+    color: #ffffff;
+    opacity: 1;
+  
+  }
+  
+  .prayer-name{
+      font-weight: 1000;
+      width: 50%;
+  }
+  

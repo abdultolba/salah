@@ -41,6 +41,7 @@ class DateHeader extends Component {
           <h4>{new Date().toLocaleString('en-us', {  weekday: 'long' })}</h4>
         </div>
           <Mosque className="mosque"/>
+          <div className="clr"></div>
       </div>
     );
   }

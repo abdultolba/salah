@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Container from "./Container";
 import DateHeader from "./DateHeader";
+import PrayerTimesList from "./PrayerTimesList";
+import Footer from "./Footer";
 
 import prayer from "../api/prayer";
 
@@ -19,6 +21,7 @@ class App extends Component {
     if (window.navigator.geolocation) {
       window.navigator.geolocation.getCurrentPosition(
         async position => {
+            console.log(position);
           const response = await prayer.get(`/timings/${unixTimestamp}`, {
             params: {
               latitude: position.coords.latitude,
@@ -28,17 +31,28 @@ class App extends Component {
             }
           });
           console.log(response);
+          this.setState({
+            prayerTimes: Object.entries(response.data.data.timings)
+          });
         },
-        err => this.setState({ errorMessage: err.message })
+        err => this.setState({ errorMessage: err.message }), {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 10000
+          }
       );
-    } else console.log("navigator not supported");
+    } else console.log("Navigator not supported.");
   }
 
   render() {
     return (
-      <Container>
-        <DateHeader />
-      </Container>
+      <Fragment>
+        <Container>
+          <DateHeader />
+          <PrayerTimesList prayerTimes={this.state.prayerTimes} />
+        </Container>
+        <Footer />
+      </Fragment>
     );
   }
 }

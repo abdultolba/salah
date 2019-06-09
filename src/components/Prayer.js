@@ -1,9 +1,11 @@
 import React from 'react';
+import './Prayer.css';
 
-const Prayer = () => {
+const Prayer = (props) => {
     return (
-        <div>
-            
+        <div className="prayer-bar">
+            <h5 className="prayer-name">{props.name}</h5>
+            <h5 className="prayer">{props.time}</h5>
         </div>
     )
 }
