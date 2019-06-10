@@ -1,5 +1,5 @@
 .container-header {
-  margin: 30px;
+  margin: 30px 30px 15px 30px;
   background-color: #000000;
   color: #ffffff;
   opacity: 0.6;
@@ -34,4 +34,18 @@
   /*Less relevant part for image div*/
   width : 75px; 
   height : 75px;
+}
+
+.location {
+  padding: 0;
+  padding-left: 1rem;
+  margin: 0 30px;
+  color: #ffffff;
+  opacity: 0.75;
+}
+
+@media screen and (max-width: 500px) {
+  .container-header {
+    margin-bottom: 30px;
+  }
 }

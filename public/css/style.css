@@ -26,3 +26,9 @@ body {
   margin: auto;
   padding: 0 2rem;
 }
+
+@media screen and (max-width: 500px) {
+  body {
+    overflow: visible;
+  }
+}

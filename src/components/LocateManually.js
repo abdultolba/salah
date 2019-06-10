@@ -1,6 +1,7 @@
 import React from "react";
-import "./LocateManually.css";
 import LocationSearchInput from "./LocationSearchInput";
+
+import "./LocateManually.css";
 
 class LocateManually extends React.Component {
   renderSearchField() {

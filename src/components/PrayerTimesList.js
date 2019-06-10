@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Loader from "react-loader-spinner";
+
 import Prayer from "./Prayer";
+
 import "./PrayerTimesList.css";
 
 class PrayerTimesList extends Component {

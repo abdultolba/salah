@@ -20,7 +20,7 @@
 }
 
 .prayer-bar:first-child{
-  margin-top: 5rem;
+  margin-top: 2.5rem;
 }
 
 .prayer-name{
@@ -28,8 +28,8 @@
     width: 50%;
 }
 
-@media screen and (max-height: 680px) {
+@media screen and (max-width: 500px) {
   .prayer-bar:first-child{
-    margin-top: 3.5rem;
+    margin-top: 1rem;
   }
 }

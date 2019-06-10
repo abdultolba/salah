@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import Geocode from "react-geocode";
 
 import Container from "./Container";
 import DateHeader from "./DateHeader";
@@ -15,6 +16,7 @@ class App extends Component {
       latitude: null,
       longitude: null,
       elevation: null,
+      address: null,
       prayerTimes: [],
       errorMessage: "",
       loading: true,
@@ -22,15 +24,14 @@ class App extends Component {
     };
   }
 
-  fetchData = async () => {
+  fetchData = async (lat, long, elevation) => {
     const response = await prayertimes.get("/times/today.json", {
       params: {
-        latitude: this.state.latitude,
-        longitude: this.state.longitude,
-        elevation: this.state.elevation
+        latitude: lat,
+        longitude: long,
+        elevation: elevation
       }
     });
-
     return response;
   };
 
@@ -43,24 +44,33 @@ class App extends Component {
     this.setState({ latitude: lat, longitude: long });
   };
 
-  componentDidMount = () => {
-    const unixTimestamp = +new Date();
+  setAddress = () => {
+    Geocode.setApiKey("AIzaSyC8t1G9mouMmq1JxJfYZTaGei8j_C-kDK4");
+    Geocode.fromLatLng(`${this.state.latitude}`, `${this.state.longitude}`)
+    .then(
+      response => {
+        const address = response.results[0].formatted_address;
+        this.setState({address});
+      },
+      error => {
+        console.error(error);
+      }
+    );
+  };
 
+  componentDidMount = () => {
     if (window.navigator.geolocation) {
       window.navigator.geolocation.getCurrentPosition(
         async position => {
+          const response = await this.fetchData(position.coords.latitude, position.coords.longitude, position.coords.altitude);
           this.setState({
             latitude: position.coords.latitude,
             longitude: position.coords.longitude,
-            elevation: position.coords.altitude
-          });
-          const response = await this.fetchData();
-          this.setState({
-            prayerTimes: Object.entries(
-              response.data.results.datetime[0].times
-            ),
+            elevation: position.coords.altitude,
+            prayerTimes: Object.entries(response.data.results.datetime[0].times),
             loading: false
           });
+          this.setAddress();
         },
         err => this.setState({ errorMessage: err.message, loading: false }),
         {
@@ -74,11 +84,12 @@ class App extends Component {
 
   componentDidUpdate = async (prevProps, prevState) => {
     if (this.state.latitude !== prevState.latitude) {
-      const response = await this.fetchData();
+      const response = await this.fetchData(this.state.latitude, this.state.longitude, this.state.elevation);
       this.setState({
         prayerTimes: Object.entries(response.data.results.datetime[0].times),
         loading: false
       });
+      this.setAddress();
     }
   };
 
@@ -86,7 +97,7 @@ class App extends Component {
     return (
       <Fragment>
         <Container>
-          <DateHeader />
+          <DateHeader location={this.state.address}/>
           <PrayerTimesList
             loading={this.state.loading}
             prayerTimes={this.state.prayerTimes}

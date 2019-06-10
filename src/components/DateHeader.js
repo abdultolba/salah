@@ -33,6 +33,17 @@ class DateHeader extends Component {
     return `${month} ${this.getOrdinalNum(day)}, ${year}`;
   };
 
+  renderLocation = () => {
+    if(this.props.location){
+      return (
+        <div className="location">
+          <h4>Prayer Times</h4>
+          <h6>Location: {this.props.location}</h6>
+        </div>
+      );
+    }
+  }
+
   render() {
     return (
       <div>
@@ -40,7 +51,8 @@ class DateHeader extends Component {
           <h3>{this.renderDate()}</h3>
           <h4>{new Date().toLocaleString('en-us', {  weekday: 'long' })}</h4>
         </div>
-          <Mosque className="mosque"/>
+        <Mosque className="mosque"/>
+        {this.renderLocation()}
       </div>
     );
   }
