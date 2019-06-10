@@ -42,7 +42,6 @@ class App extends Component {
             prayerTimes: Object.entries(response.data.data.timings),
             loading: false
           });
-          console.log("Prayer Times for:", this.state.latitude, this.state.longitude);
         },
         err => this.setState({ errorMessage: err.message, loading: false }),
         {
@@ -69,7 +68,6 @@ class App extends Component {
         prayerTimes: Object.entries(response.data.data.timings),
         loading: false
       });
-      console.log("New Prayer Times for:", this.state.latitude, this.state.longitude);
     }
   };
 
