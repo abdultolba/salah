@@ -6,7 +6,6 @@ import "./PrayerTimesList.css";
 class PrayerTimesList extends Component {
   render() {
     if (this.props.loading) {
-      console.log("test");
       return (
         <div className="loader">
           <Loader type="Oval" color="rgb(1,205,180)" height="100" width="100" />
@@ -16,7 +15,6 @@ class PrayerTimesList extends Component {
     const prayers = ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"];
     return (
       <div>
-        {console.log(this.props.prayerTimes)}
         {this.props.prayerTimes
           .filter(prayer => prayers.includes(prayer[0]))
           .map(prayer => {

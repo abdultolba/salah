@@ -1,0 +1,16 @@
+.manual-location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.manual-location button {
+    cursor: pointer;
+    background: rgb(1,205,180);
+    color: #ffffff;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.8rem;
+}

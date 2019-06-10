@@ -5,13 +5,14 @@ const Footer = () => {
   return (
     <footer>
       <p className="icons">
+        Contact:
         <a
           href="https://www.github.com/abdultolba"
           rel="noreferrer noopener"
           alt="Github"
           target="_blank"
         >
-          <i className="icon ion-logo-github" /> GitHub
+          <i className="icon ion-logo-github" />
         </a>
         <a
           href="https://www.linkedin.com/in/abdulrahman-tolba"
@@ -19,7 +20,7 @@ const Footer = () => {
           alt="LinkedIn"
           target="_blank"
         >
-          <i className="icon ion-logo-linkedin" /> LinkedIn
+          <i className="icon ion-logo-linkedin" />
         </a>
         <a
           href="https://www.twitter.com/abdultolba_"
@@ -27,7 +28,7 @@ const Footer = () => {
           alt="Twitter"
           target="_blank"
         >
-          <i className="icon ion-logo-twitter" /> Twitter
+          <i className="icon ion-logo-twitter" />
         </a>
         <a
           href="https://www.abdultolba.com"
@@ -35,7 +36,7 @@ const Footer = () => {
           alt="Personal Website"
           target="_blank"
         >
-          <i className="icon ion-md-globe" /> Portfolio
+          <i className="icon ion-md-globe" />
         </a>
       </p>
       <p>
