@@ -38,6 +38,7 @@ class LocationSearchInput extends React.Component {
                 placeholder: 'Search Places ...',
                 className: 'location-search-input',
               })}
+              style={{border: '0 solid #fff', borderRadius: '1px', width: '10rem'}}
             />
             <div className="autocomplete-dropdown-container">
               {loading && <div>Loading...</div>}
@@ -47,8 +48,8 @@ class LocationSearchInput extends React.Component {
                   : 'suggestion-item';
                 // inline style for demonstration purpose
                 const style = suggestion.active
-                  ? { backgroundColor: '#fafafa', cursor: 'pointer' }
-                  : { backgroundColor: '#ffffff', cursor: 'pointer' };
+                  ? { backgroundColor: '#fafafa', cursor: 'pointer', fontSize: '0.7rem' }
+                  : { backgroundColor: '#ffffff', cursor: 'pointer', fontSize: '0.7rem' };
                 return (
                   <div
                     {...getSuggestionItemProps(suggestion, {

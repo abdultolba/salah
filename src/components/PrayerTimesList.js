@@ -14,7 +14,7 @@ class PrayerTimesList extends Component {
         </div>
       );
     }
-    const prayers = ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"];
+    const prayers = ["Fajr", /*"Sunrise",*/ "Dhuhr", "Asr", "Maghrib", "Isha"];
     return (
       <div>
         {this.props.prayerTimes
