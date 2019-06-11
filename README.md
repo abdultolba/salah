@@ -4,6 +4,7 @@ Salah is a responsive, mobile-friendly, single page application written in React
 **Note:** Prayer times are retrived using the [Prayer Times API](https://prayertimes.date/api/docs/today#). Further configuration can be made depending on beliefs/location.
 
 ## Demo
+[Live Demo](https://abdultolba.github.io/salah)
 
 ![Web App Demo](https://github.com/abdultolba/salah/blob/master/assets/demo.png "Salah")
 
