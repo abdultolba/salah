@@ -14,3 +14,7 @@
     border: none;
     font-size: 0.8rem;
 }
+
+.manual-location button:hover {
+    background: rgb(0,171,149);
+}

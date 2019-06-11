@@ -60,6 +60,10 @@ class App extends Component {
     );
   };
 
+  unMountInputField = () => {
+    this.setState({ manualForm: false});
+  }
+
   componentDidMount = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -118,6 +122,7 @@ class App extends Component {
             loading={this.state.loading}
             handleClick={this.handleButtonClick}
             displayForm={this.state.manualForm}
+            unMountInputField={this.unMountInputField}
             handleMapsSearch={this.handleMapsSearch}
           />
         </Container>

@@ -1,24 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 import LocationSearchInput from "./LocationSearchInput";
-
 import "./LocateManually.css";
 
-class LocateManually extends React.Component {
+class LocateManually extends Component {
   renderSearchField() {
     if (this.props.displayForm) {
       return (
         <div>
-          <LocationSearchInput handleMapsSearch={this.props.handleMapsSearch} />
+          <LocationSearchInput unMountMe={this.props.unMountInputField} handleMapsSearch={this.props.handleMapsSearch} />
         </div>
       );
     }
   }
   render() {
-    if (this.props.loading) return <div />;
+    if (this.props.loading) return null;
     return (
       <div className="manual-location">
         <button onClick={this.props.handleClick}>Locate Me Manually</button>
-        <br />
         {this.renderSearchField()}
       </div>
     );

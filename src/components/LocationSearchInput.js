@@ -7,7 +7,7 @@ import PlacesAutocomplete, {
 class LocationSearchInput extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { address: '' };
+    this.state = { address: '', searching: true };
   }
 
   handleChange = address => {
@@ -22,6 +22,7 @@ class LocationSearchInput extends React.Component {
           this.props.handleMapsSearch(latitude, longitude);
       })
       .catch(error => console.error('Error', error));
+      this.props.unMountMe();
   };
 
   render() {
