@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 body {
   background: rgb(255, 255, 255);
@@ -19,6 +23,7 @@ body {
   margin-bottom: 50px;
   overflow-x: hidden;
   overflow-y: auto;
+  padding-bottom: 50px;
 }
 
 .container {
