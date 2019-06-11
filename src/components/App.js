@@ -29,7 +29,8 @@ class App extends Component {
       params: {
         latitude: lat,
         longitude: long,
-        elevation: elevation
+        elevation: elevation,
+        school: 2
       }
     });
     return response;
@@ -84,7 +85,10 @@ class App extends Component {
           });
           this.setAddress();
         },
-        err => this.setState({ errorMessage: err.message, loading: false }),
+        err => {
+          alert('Could not get your location. Please provide it manually');
+          this.setState({ errorMessage: err.message, loading: false })
+        },
         {
           enableHighAccuracy: true,
           timeout: 5000,
