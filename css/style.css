@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 212, 255, 1) 35%,
+    rgba(4, 121, 195, 1) 70%,
+    rgba(4, 64, 96, 1) 100%
+  );
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: 50px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    overflow: visible;
+  }
+}
+
+/* iPhone 6/7/8 */
+@media screen and (max-height: 667px) {
+  body {
+    height: calc(100vh + 50px);
+  }
+}
+
+/* iPhone 5/5S/SE */
+@media screen and (max-height: 568px) {
+  body {
+    height: calc(100vh + 100px);
+  }
+}
