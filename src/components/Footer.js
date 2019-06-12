@@ -1,4 +1,5 @@
 import React from "react";
+import Anchor from './Anchor';
 import "./Footer.css";
 
 const Footer = () => {
@@ -6,38 +7,18 @@ const Footer = () => {
     <footer>
       <p className="icons">
         Contact:
-        <a
-          href="https://www.github.com/abdultolba"
-          rel="noreferrer noopener"
-          alt="Github"
-          target="_blank"
-        >
+        <Anchor link="https://www.github.com/abdultolba" name="Github">
           <i className="icon ion-logo-github" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/abdulrahman-tolba"
-          rel="noreferrer noopener"
-          alt="LinkedIn"
-          target="_blank"
-        >
+        </Anchor>
+        <Anchor link="https://www.linkedin.com/in/abdulrahman-tolba" name="LinkedIn">
           <i className="icon ion-logo-linkedin" />
-        </a>
-        <a
-          href="https://www.twitter.com/abdultolba_"
-          rel="noreferrer noopener"
-          alt="Twitter"
-          target="_blank"
-        >
+        </Anchor>
+        <Anchor link="https://www.twitter.com/abdultolba_" name="Twitter">
           <i className="icon ion-logo-twitter" />
-        </a>
-        <a
-          href="https://www.abdultolba.com"
-          rel="noreferrer noopener"
-          alt="Personal Website"
-          target="_blank"
-        >
+        </Anchor>
+        <Anchor link="https://www.abdultolba.com" name="Personal Website">
           <i className="icon ion-md-globe" />
-        </a>
+        </Anchor>
       </p>
       <p>
         Copyright &copy; {new Date().getFullYear()} Abdulrahman Tolba. All
