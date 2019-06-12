@@ -95,7 +95,11 @@ class App extends Component {
           maximumAge: 10000
         }
       );
-    } else console.log("Navigator not supported.");
+    } else {
+      alert('Please ensure your browser\'s location services are enabled.')
+      console.log("Navigator not supported.");
+      this.setState({loading: false});
+    }
   };
 
   componentDidUpdate = async (prevProps, prevState) => {
