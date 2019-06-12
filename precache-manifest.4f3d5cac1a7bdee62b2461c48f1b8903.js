@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8abe1abb3127a47332fc6f73acdf1f97",
+    "revision": "cb3827292435d7423cda7e1d05f7869c",
     "url": "/salah/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/salah/static/css/2.5d832d7a.chunk.css"
   },
   {
-    "revision": "24fddd55e7efbcb0bfd2",
+    "revision": "57c96d88a73e2fc270bf",
     "url": "/salah/static/css/main.78918055.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/salah/static/js/2.30966927.chunk.js"
   },
   {
-    "revision": "24fddd55e7efbcb0bfd2",
-    "url": "/salah/static/js/main.25acdcaa.chunk.js"
+    "revision": "57c96d88a73e2fc270bf",
+    "url": "/salah/static/js/main.9894aa7b.chunk.js"
   },
   {
     "revision": "d522db399cd671c75ebc",
