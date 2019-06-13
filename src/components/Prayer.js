@@ -4,8 +4,10 @@ import './Prayer.css';
 class Prayer extends Component {
     displayTime = () => {
         const time = this.props.time;
-        // TODO: Fix weird NaN display on Chrome
-        if(time === '-:-') return time;
+        /**
+         * TODO: Fix weird NaN display on Chrome
+         **/
+        if(time === '-') return time;
         let splitTime = time.split(':');
         let [ hours, minutes ] = splitTime;
         hours = parseInt(hours);
