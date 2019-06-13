@@ -14,18 +14,10 @@ class DateHeader extends Component {
 
   renderDate = () => {
     const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
+      "January", "February", "March",
+      "April", "May", "June",
+      "July", "August", "September",
+      "October", "November", "December"
     ];
     const month = months[new Date().getMonth()];
     const day = new Date().getDate();
